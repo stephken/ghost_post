@@ -1,0 +1,15 @@
+<a href="/">Home</a>
+<a href="/boasts/">Most Boasts</a>
+<a href="/roasts/">Most Roasts</a>
+<a href="/score/">Scores</a>
+<a href="/add_choice/">Add Roast Or Boast</a>
+
+<ul>
+    {%for roast_boast in most_recent %}
+    <h2>{{roast_boast.boast}}</h2>
+    <p>{{roast_boast.user_input}}</p>
+    <h2>{{roast_boast.up_vote}}</h2>
+    <h2>{{roast_boast.down_vote}}</h2>
+    {% endfor %}
+
+</ul>
