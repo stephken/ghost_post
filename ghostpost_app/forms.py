@@ -1,7 +1,10 @@
 from django import forms
+from ghostpost_app.models import Roast_Boast
 
 ROAST_BOAST=((True, "Boast"), (False, "Roast"))
 
-class add_roastboast(forms.Form):
-    roastboast = forms.ChoiceField(choices=ROAST_BOAST)
-    content = forms.CharField(max_length=200)
+class add_roastboast(forms.ModelForm):
+    class Meta:
+        model = Roast_Boast
+        fields= ['user_input', 'boast']
+    

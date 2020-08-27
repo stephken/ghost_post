@@ -1,6 +1,13 @@
+<h1>{{ add_title }}</h1>
+
+<nav style="text-align: center; background-color: #bb9f9f;">
+  <a href="/">Home</a>
+  <a href="/score/">Sort</a>
+  <a href="/boast/">Boasts</a>
+  <a href="/roast/">Roasts</a>
+</nav>
+
 <form action="" method="POST">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Submit</button>
+  {% csrf_token %} {{ form.as_p }}
+  <input type="submit" value="Submit!" />
 </form>
-<a href="/">HOME</a>

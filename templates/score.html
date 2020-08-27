@@ -1,0 +1,23 @@
+<h1>{{ votes_title }}</h1>
+
+<nav style="text-align: center; background-color: #d3d3d3;">
+  <a href="/">Home</a>
+  <a href="/boast/">Boasts</a>
+  <a href="/roast/">Roasts</a>
+  <a href="/add_post/">Add</a>
+</nav>
+
+{% for post in votes %}
+<div style="padding: 5px; border: solid #222 1px; margin-bottom: 5px;">
+  <h3>{{ post.boast }}</h3>
+  {% if post.boast == True %}
+  <h3>Boast</h3>
+  {% else %}
+  <h3>Roast</h3>
+  {% endif %}
+  <h3>{{ post.count_votes }}</h3>
+  <a href="/up_vote/{{post.id}}/">upvote</a>
+  <a href="/down_vote/{{post.id}}/">downvote</a>
+  <h3>{{ post.submission_time }}</h3>
+</div>
+{% endfor %}
