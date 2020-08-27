@@ -13,6 +13,6 @@ class Roast_Boast(models.Model):
 
     @property
     def count_votes(self):
-        return self.up_vote - self.down_vote
+        return self.up_vote + self.down_vote
     
 

@@ -21,7 +21,7 @@ urlpatterns = [
     path("", views.index_view, name="Home"),
     path('add_post/', views.add_post_view),
     path('up_vote/<int:post_id>/', views.up_vote),
-    path('down_vote/int:post_id>/', views.down_vote),
+    path('down_vote/<int:post_id>/', views.down_vote),
     path('roast/', views.roast_view),
     path('score/', views.score_view),
     path('boast/', views.boast_view ),
